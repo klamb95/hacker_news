@@ -20,13 +20,13 @@ const NewsContainer = () => {
         fetch('https://hacker-news.firebaseio.com/v0/topstories.json')
         .then(results => results.json())
         .then(data => data.map((id) => {
-        return `https://hacker-news.firebaseio.com/v0/item/${id}.json`
+        return fetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json`)
         }))
-        .then(urls => (urls))
-
-        
-
+        .then(urls => Promise.all(urls))
+        .then(articles => setArticles(articles))
     }
+
+    console.log(articles)
 
     // const getArticles = () => {
     //     Promise.all(createUrls())
