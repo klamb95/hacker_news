@@ -1,10 +1,10 @@
 import React from 'react';
 import ListItem from './ListItem';
+// import NewsFilter from './NewsFilter';
 
 const NewsList = ({articles}) => {
 
     const articleItems = articles.map((article, index) => {
-        console.log(article.url)
         return <ListItem article={article} key={index}/>
     });
 
