@@ -1,9 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import NewsContainer from './containers/NewsContainer';
 
 function App() {
   return (
   <>
+  <NewsContainer/>
   </>
   );
 }
