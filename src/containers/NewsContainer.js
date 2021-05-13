@@ -24,8 +24,8 @@ const NewsContainer = () => {
       }, []);
 
       const onArticleSearched = function(text){
-          articles.filter((article) => {
-              return article.title.includes(text)
+        return articles.filter((article) => {
+            return article.title.includes(text)
           })
       }
 
